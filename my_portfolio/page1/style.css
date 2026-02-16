@@ -1,0 +1,119 @@
+/* プロジェクト詳細ページのスタイル */
+.project-detail {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
+
+/* スペックシート部分 */
+.project-specs {
+    margin-bottom: 150px;
+    border-top: 1px solid #000;
+    padding-top: 20px;
+}
+
+.project-title {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+
+.project-id {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 60px;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.spec-item .label {
+    display: block;
+    font-size: 0.6rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.spec-item .value {
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.project-description {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* 更新情報 */
+.update-info {
+    margin: 40px 0;
+    padding: 16px;
+    border-left: 4px solid #222;
+    background: #fafafa;
+}
+.update-info h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+}
+.update-info ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+.update-info li {
+    font-size: 0.95rem;
+    color: #111;
+}
+
+/* ギャラリー部分 (非対称レイアウト) */
+.project-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-item.large { width: 100%; }
+.gallery-item {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+.gallery-item.medium { width: 60%; }
+.gallery-item.right { align-self: flex-end; }
+.gallery-item.left { align-self: flex-start; }
+.gallery-item.wide { width: 100%; }
+
+/* ナビゲーション */
+.project-nav {
+    margin-top: 200px;
+    padding-top: 40px;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.project-nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .project-title { font-size: 2.5rem; }
+    .spec-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .gallery-item.medium { width: 100%; }
+}
