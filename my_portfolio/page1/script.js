@@ -1,17 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const observerOptions = {
-        threshold: 0.2 // 20%見えたら発火
-    };
+    const elements = document.querySelectorAll(".animate-text");
+    const supportsIntersectionObserver = "IntersectionObserver" in window;
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-            }
-        });
-    }, observerOptions);
+    if (!elements.length) {
+        return;
+    }
 
-    // すべての .animate-text を監視対象にする
-    const elements = document.querySelectorAll('.animate-text');
-    elements.forEach(el => observer.observe(el));
+    if (supportsIntersectionObserver) {
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                }
+            });
+        }, observerOptions);
+
+        elements.forEach((el) => observer.observe(el));
+    } else {
+        elements.forEach((el) => el.classList.add("is-visible"));
+    }
 });
