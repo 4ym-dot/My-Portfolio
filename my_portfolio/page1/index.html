@@ -7,57 +7,98 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<article class="project-detail">
-    <h1 class="project-title">成長可視化型 ToDoアプリ</h1>
-    <section class="project-specs">
-        <div class="spec-group">
-            <p class="project-id">REF: RS-2026-V1</p>
-        </div>
-
-        <div class="spec-grid">
-            <div class="spec-item">
-                <span class="label">CATEGORY</span>
-                <span class="value">WEB App</span>
+    <article class="project-detail">
+        <h1 class="project-title">成長可視化型 ToDoアプリ</h1>
+        <section class="project-specs">
+            <div class="spec-group">
+                <p class="project-id">REF: RS-2026-V1</p>
             </div>
-            <div class="spec-item">
-                <span class="label">YEAR</span>
-                <span class="value">2026</span>
+
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="label">CATEGORY</span>
+                    <span class="value">WEB App</span>
+                </div>
+                <div class="spec-item">
+                    <span class="label">YEAR</span>
+                    <span class="value">2026</span>
+                </div>
+                <div class="spec-item">
+                    <span class="label">production time</span>
+                    <span class="value">2h</span>
+                </div>
+                <div class="spec-item">
+                    <span class="label">STATUS</span>
+                    <span class="value">ARCHIVED</span>
+                </div>
             </div>
-            <div class="spec-item">
-                <span class="label">production time</span>
-                <span class="value">2h</span>
+        </section>
+
+        <section class="update-info">
+            <h2>更新情報</h2>
+            <ul>
+                <li><time datetime="2026-02-16">2026-02-16</time> ミュート機能を追加</li>
+            </ul>
+        </section>
+
+        <section class="project-gallery">
+            <div class="gallery-item large">
+                <img src="../images/ToDo.png" alt="Main Look">
             </div>
-            <div class="spec-item">
-                <span class="label">STATUS</span>
-                <span class="value">ARCHIVED</span>
+            <div class="gallery-item wide">
+                <img src="../images/ToDo_D.png" alt="Wide View">
+            </div>
+        </section>
+
+        <section class="info-section">
+    <div class="info-grid">
+        <div class="info-column">
+            <div class="content">
+                <h1 class="animate-text large-text" style="margin-top: 100px;">LIFE AS A QUEST — 成長を可視化する、RPG風タスク管理システム</h1>
+                <p class="animate-text description">
+                    「退屈な日常のタスクを、RPGのクエストに変える」<br>
+                    単なる「やるべきことのリスト化」に留まらず、タスクを達成するたびに経験値（XP）を獲得し、レベルアップしていく仕組みを取り入れることで、ユーザーの自己研鑽をエンターテインメント化し、モチベーションを継続させることを目的としたToDoアプリです。
+                </p>
             </div>
         </div>
 
-        <div class="project-description">
-            <p></p>
-        </div>
-    </section>
+        <div class="info-column spec-sheet">
+            <h2 class="label" style="margin-top: 100px;">SYSTEM_SPECIFICATION</h2>
+            <ul class="spec-list">
+                <li><span>LANGUAGE</span> HTML5, CSS3, JavaScript (ES6+)</li>
+                <li><span>AUDIO_ENGINE</span> Web Audio API (for Sound Effects)</li>
+                <li><span>STORAGE</span> LocalStorage API</li>
+                <li><span>Infrastructure</span> GitHub, Vercel</li>
+            </ul>
 
-    <section class="update-info">
-        <h2>更新情報</h2>
-        <ul>
-            <li><time datetime="2026-02-16">2026-02-16</time> ミュート機能を追加</li>
-        </ul>
-    </section>
-
-    <section class="project-gallery">
-        <div class="gallery-item large">
-            <img src="../images/ToDo.png" alt="Main Look">
+    <h2 class="label" style="margin-top: 60px;">TECHNICAL_POINTS</h2>
+        <div class="tech-points">
+            <div class="point-item">
+                <span class="point-title">DATA_PERSISTENCE:</span>
+                <p>サーバーレスながら、LocalStorageを活用。ブラウザを閉じてもレベルやクエストデータが保持される永続化の仕組みを構築しました。</p>
+            </div>
+        <div class="point-item">
+            <span class="point-title">CODE_ARCHITECTURE:</span>
+            <p>ロジック(JS)、スタイル(CSS)、構造(HTML)を完全に分離。JS内ではgameStateやSoundManagerといったオブジェクトを定義し、拡張性の高いコードを目指しました。</p>
         </div>
-        <div class="gallery-item wide">
-            <img src="../images/ToDo_D.png" alt="Wide View">
+    </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <nav class="project-nav">
-        <a href="../main/index.html" class="back-link">BACK TO ARCHIVE</a>
-        <a href="next-project.html" class="next-link">NEXT PROJECT →</a>
-    </nav>
-</article>
+        <div class="production-note-container">
+            <p class="production-note">
+                <span class="prefix">[ NOTICE ]</span>画像は製作段階のものです。最終的なアウトプットとは異なる場合があります。
+            </p>
+        </div>
+
+        <nav class="project-nav">
+            <a href="../main/index.html" class="back-link">BACK TO ARCHIVE</a>
+            <a href="https://somnia-plum.vercel.app/" class="next-link" target="_blank" rel="noopener noreferrer">NEXT PROJECT →</a>
+        </nav>
+    </article>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
