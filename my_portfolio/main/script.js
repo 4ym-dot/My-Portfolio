@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (supportsIntersectionObserver) {
         const typoObserverOptions = {
-            threshold: 0.5
+            threshold: 0.1
         };
 
         const typoObserver = new IntersectionObserver((entries, observer) => {
